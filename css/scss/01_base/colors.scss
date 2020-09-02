@@ -1,0 +1,174 @@
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+    @if $b-hsb == 0 {
+      @return hsla(0, 0, 0, $a)
+    } @else {
+      $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
+      $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+      @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+    }
+}
+
+
+$true-black: #000;
+$true-white: #fff;
+
+$base-100: hsb(0, 0, 95);
+$base-200: hsb(0, 0, 85);
+$base-300: hsb(0, 0, 75);
+$base-400: hsb(0, 0, 65);
+$base-500: hsb(0, 0, 55);
+$base-600: hsb(0, 0, 45);
+$base-700: hsb(0, 0, 35);
+$base-800: hsb(0, 0, 25);
+$base-900: hsb(0, 0, 15);
+
+$neutral-100: hsb(210, 2, 97);
+$neutral-200: hsb(218, 5, 92);
+$neutral-300: hsb(215, 9, 87);
+$neutral-400: hsb(214, 12, 81);
+$neutral-500: hsb(214, 18, 76);
+$neutral-600: hsb(214, 20, 66);
+$neutral-700: hsb(214, 19, 51);
+$neutral-800: hsb(215, 20, 37);
+$neutral-900: hsb(218, 20, 22);
+
+
+
+// //palette colors
+// $red-100:  v
+// $red-200: ;
+// $red-300: ;
+// $red-400: ;
+// $red-500: ;
+// $red-600: ;
+// $red-700: ;
+// $red-800: ;
+// $red-900: ;
+
+// $orange-100: ;
+// $orange-200: ;
+// $orange-300: ;
+// $orange-400: ;
+// $orange-500: ;
+// $orange-600: ;
+// $orange-700: ;
+// $orange-800: ;
+// $orange-900: ;
+
+// $yellow-100: ;
+// $yellow-200: ;
+// $yellow-300: ;
+// $yellow-400: ;
+// $yellow-500: ;
+// $yellow-600: ;
+// $yellow-700: ;
+// $yellow-800: ;
+// $yellow-900: ;
+
+// $amber-100: ;
+// $amber-200: ;
+// $amber-300: ;
+// $amber-400: ;
+// $amber-500: ;
+// $amber-600: ;
+// $amber-700: ;
+// $amber-800: ;
+// $amber-900: ;
+
+// $lime-100: ;
+// $lime-200: ;
+// $lime-300: ;
+// $lime-400: ;
+// $lime-500: ;
+// $lime-600: ;
+// $lime-700: ;
+// $lime-800: ;
+// $lime-900: ;
+
+// $green-100: ;
+// $green-200: ;
+// $green-300: ;
+// $green-400: ;
+// $green-500: ;
+// $green-600: ;
+// $green-700: ;
+// $green-800: ;
+// $green-900: ;
+
+// $teal-100
+
+
+
+
+
+// //semantic colors
+// $primary-100: ;
+// $primary-200: ;
+// $primary-300: ;
+// $primary-400: ;
+// $primary-500: ;
+// $primary-600: ;
+// $primary-700: ;
+// $primary-800: ;
+// $primary-900: ;
+
+// $secondary-100: ;
+// $secondary-200: ;
+// $secondary-300: ;
+// $secondary-400: ;
+// $secondary-500: ;
+// $secondary-600: ;
+// $secondary-700: ;
+// $secondary-800: ;
+// $secondary-900: ;
+
+// $tertiary-100: ;
+// $tertiary-200: ;
+// $tertiary-300: ;
+// $tertiary-400: ;
+// $tertiary-500: ;
+// $tertiary-600: ;
+// $tertiary-700: ;
+// $tertiary-800: ;
+// $tertiary-900: ;
+
+// $danger-100: ;
+// $danger-200: ;
+// $danger-300: ;
+// $danger-400: ;
+// $danger-500: ;
+// $danger-600: ;
+// $danger-700: ;
+// $danger-800: ;
+// $danger-900: ;
+
+// $success-100: ;
+// $success-200: ;
+// $success-300: ;
+// $success-400: ;
+// $success-500: ;
+// $success-600: ;
+// $success-700: ;
+// $success-800: ;
+// $success-900: ;
+
+// $warning-100: ;
+// $warning-200: ;
+// $warning-300: ;
+// $warning-400: ;
+// $warning-500: ;
+// $warning-600: ;
+// $warning-700: ;
+// $warning-800: ;
+// $warning-900: ;
+
+// $info-100: ;
+// $info-200: ;
+// $info-300: ;
+// $info-400: ;
+// $info-500: ;
+// $info-600: ;
+// $info-700: ;
+// $info-800: ;
+// $info-900: ;
+
