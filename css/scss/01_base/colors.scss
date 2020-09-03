@@ -1,174 +1,310 @@
-@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
-    @if $b-hsb == 0 {
-      @return hsla(0, 0, 0, $a)
-    } @else {
-      $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
-      $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
-      @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
-    }
-}
+//Brand Colors 
+//--------------------------------------------------------
+
+//default/ 
+$default-50: #F3F3F3; 
+$default-100: #E6E6E6; 
+$default-200: #CCCCCC; 
+$default-300: #B3B3B3; 
+$default-400: #999999; 
+$default-500: #808080; 
+$default-600: #606060; 
+$default-700: #404040; 
+$default-800: #202020; 
+$default-900: #0D0D0D; 
+
+//neutral/ 
+$neutral-50: #F6F8F9; 
+$neutral-100: #ECEFF3; 
+$neutral-200: #D9DFE7; 
+$neutral-300: #C6CFDA; 
+$neutral-400: #B3BFCE; 
+$neutral-500: #A0AFC2; 
+$neutral-600: #788392; 
+$neutral-700: #505861; 
+$neutral-800: #282C31; 
+$neutral-900: #101213; 
+
+//primary/ 
+$primary-50: #EBEBFB; 
+$primary-100: #D6D5F6; 
+$primary-200: #ACABEC; 
+$primary-300: #8382E3; 
+$primary-400: #5958D9; 
+$primary-500: #302ED0; 
+$primary-600: #24239C; 
+$primary-700: #181768; 
+$primary-800: #0C0C34; 
+$primary-900: #050515; 
+
+//secondary/ 
+$secondary-50: #FEF5F9; 
+$secondary-100: #FCEAF1; 
+$secondary-200: #F9D6E3; 
+$secondary-300: #F7C1D5; 
+$secondary-400: #F4ADC7; 
+$secondary-500: #F198B9; 
+$secondary-600: #B5728B; 
+$secondary-700: #794C5D; 
+$secondary-800: #3C262E; 
+$secondary-900: #180F13; 
+
+//tertiary/ 
+$tertiary-50: #FDF3F3; 
+$tertiary-100: #FBE6E5; 
+$tertiary-200: #F7CECB; 
+$tertiary-300: #F2B5B2; 
+$tertiary-400: #EE9D98; 
+$tertiary-500: #EA847E; 
+$tertiary-600: #B0635F; 
+$tertiary-700: #75423F; 
+$tertiary-800: #3B2120; 
+$tertiary-900: #170D0D; 
+
+//base/ 
+$base-50: #FDFDFE; 
+$base-100: #F9FAFC; 
+$base-200: #F4F6FA; 
+$base-300: #EEF1F7; 
+$base-400: #E9EDF5; 
+$base-500: #E3E8F2; 
+$base-600: #AAAEB6; 
+$base-700: #727479; 
+$base-800: #393A3D; 
+$base-900: #171718; 
 
 
-$true-black: #000;
-$true-white: #fff;
+//Palette Colors
+//--------------------------------------------------------
 
-$base-100: hsb(0, 0, 95);
-$base-200: hsb(0, 0, 85);
-$base-300: hsb(0, 0, 75);
-$base-400: hsb(0, 0, 65);
-$base-500: hsb(0, 0, 55);
-$base-600: hsb(0, 0, 45);
-$base-700: hsb(0, 0, 35);
-$base-800: hsb(0, 0, 25);
-$base-900: hsb(0, 0, 15);
+//palette-red/ 
+$palette-red-50: #FEEBEB; 
+$palette-red-100: #FDD5D5; 
+$palette-red-200: #FAABAB; 
+$palette-red-300: #F88282; 
+$palette-red-400: #F55858; 
+$palette-red-500: #F32E2E; 
+$palette-red-600: #B62323; 
+$palette-red-700: #7A1717; 
+$palette-red-800: #3D0C0C; 
+$palette-red-900: #180505; 
 
-$neutral-100: hsb(210, 2, 97);
-$neutral-200: hsb(218, 5, 92);
-$neutral-300: hsb(215, 9, 87);
-$neutral-400: hsb(214, 12, 81);
-$neutral-500: hsb(214, 18, 76);
-$neutral-600: hsb(214, 20, 66);
-$neutral-700: hsb(214, 19, 51);
-$neutral-800: hsb(215, 20, 37);
-$neutral-900: hsb(218, 20, 22);
+//palette-orange/ 
+$palette-orange-50: #FFF2E8; 
+$palette-orange-100: #FFE4CF; 
+$palette-orange-200: #FFC99F; 
+$palette-orange-300: #FFAD6F; 
+$palette-orange-400: #FF923F; 
+$palette-orange-500: #FF770F; 
+$palette-orange-600: #BF590B; 
+$palette-orange-700: #803C08; 
+$palette-orange-800: #401E04; 
+$palette-orange-900: #1A0C02; 
+
+//palette-amber/ 
+$palette-amber-50: #FFF5E8; 
+$palette-amber-100: #FFEBD0; 
+$palette-amber-200: #FFD7A1; 
+$palette-amber-300: #FFC271; 
+$palette-amber-400: #FFAE42; 
+$palette-amber-500: #FF9A13; 
+$palette-amber-600: #BF740E; 
+$palette-amber-700: #804D0A; 
+$palette-amber-800: #402705; 
+$palette-amber-900: #1A0F02; 
+
+//palette-yellow/ 
+$palette-yellow-50: #FFFAE6; 
+$palette-yellow-100: #FFF4CC; 
+$palette-yellow-200: #FFE999; 
+$palette-yellow-300: #FFDF66; 
+$palette-yellow-400: #FFD433; 
+$palette-yellow-500: #FFC900; 
+$palette-yellow-600: #BF9700; 
+$palette-yellow-700: #806500; 
+$palette-yellow-800: #403200; 
+$palette-yellow-900: #1A1400; 
+
+//palette-lime/ 
+$palette-lime-50: #F5FCE9; 
+$palette-lime-100: #E9F8D2; 
+$palette-lime-200: #D3F1A4; 
+$palette-lime-300: #BEEA77; 
+$palette-lime-400: #A8E349; 
+$palette-lime-500: #92DC1C; 
+$palette-lime-600: #6EA515; 
+$palette-lime-700: #496E0E; 
+$palette-lime-800: #253707; 
+$palette-lime-900: #0F1603; 
+
+//palette-green/ 
+$palette-green-50: #E9FBF0; 
+$palette-green-100: #D2F6E0; 
+$palette-green-200: #A4EDC2; 
+$palette-green-300: #77E4A3; 
+$palette-green-400: #49DB85; 
+$palette-green-500: #1CD266; 
+$palette-green-600: #159E4D; 
+$palette-green-700: #0E6933; 
+$palette-green-800: #07351A; 
+$palette-green-900: #03150A; 
+
+//palette-teal/ 
+$palette-teal-50: #E8FCF8; 
+$palette-teal-100: #D1F9EF; 
+$palette-teal-200: #A3F3DF; 
+$palette-teal-300: #74ECD0; 
+$palette-teal-400: #46E6C0; 
+$palette-teal-500: #18E0B0; 
+$palette-teal-600: #12A884; 
+$palette-teal-700: #0C7058; 
+$palette-teal-800: #06382C; 
+$palette-teal-900: #021612; 
+
+//palette-cyan/ 
+$palette-cyan-50: #E9FDFD; 
+$palette-cyan-100: #D1FAFA; 
+$palette-cyan-200: #A3F5F6; 
+$palette-cyan-300: #76F0F1; 
+$palette-cyan-400: #48EBED; 
+$palette-cyan-500: #1AE6E8; 
+$palette-cyan-600: #14ADAE; 
+$palette-cyan-700: #0D7374; 
+$palette-cyan-800: #073A3A; 
+$palette-cyan-900: #031717; 
+
+//palette-blue/ 
+$palette-blue-50: #EAF6FF; 
+$palette-blue-100: #D5EBFF; 
+$palette-blue-200: #ABD7FF; 
+$palette-blue-300: #80C3FF; 
+$palette-blue-400: #56AFFF; 
+$palette-blue-500: #2C9BFF; 
+$palette-blue-600: #2174BF; 
+$palette-blue-700: #164E80; 
+$palette-blue-800: #0B2740; 
+$palette-blue-900: #04101A; 
+
+//palette-indigo/ 
+$palette-indigo-50: #EBEAFC; 
+$palette-indigo-100: #D5D3F7; 
+$palette-indigo-200: #ABA7EF; 
+$palette-indigo-300: #817CE8; 
+$palette-indigo-400: #5750E0; 
+$palette-indigo-500: #2D24D8; 
+$palette-indigo-600: #221BA2; 
+$palette-indigo-700: #17126C; 
+$palette-indigo-800: #0B0936; 
+$palette-indigo-900: #050416; 
+
+//palette-purple/ 
+$palette-purple-50: #F1E9FE; 
+$palette-purple-100: #E1D1FC; 
+$palette-purple-200: #C3A3F9; 
+$palette-purple-300: #A576F7; 
+$palette-purple-400: #8748F4; 
+$palette-purple-500: #691AF1; 
+$palette-purple-600: #4F14B5; 
+$palette-purple-700: #350D79; 
+$palette-purple-800: #1A073C; 
+$palette-purple-900: #0B0318; 
+
+//palette-violet/ 
+$palette-violet-50: #F8E9FF; 
+$palette-violet-100: #F0D3FD; 
+$palette-violet-200: #E1A7FC; 
+$palette-violet-300: #D17AFA; 
+$palette-violet-400: #C24EF9; 
+$palette-violet-500: #B322F7; 
+$palette-violet-600: #861AB9; 
+$palette-violet-700: #5A117C; 
+$palette-violet-800: #2D093E; 
+$palette-violet-900: #120319; 
+
+//palette-magenta/ 
+$palette-magenta-50: #FCE9F8; 
+$palette-magenta-100: #F9D2EF; 
+$palette-magenta-200: #F3A5E0; 
+$palette-magenta-300: #EC77D0; 
+$palette-magenta-400: #E64AC1; 
+$palette-magenta-500: #E01DB1; 
+$palette-magenta-600: #A81685; 
+$palette-magenta-700: #700F59; 
+$palette-magenta-800: #38072C; 
+$palette-magenta-900: #160312; 
+
+//palette-pink/ 
+$palette-pink-50: #FEEAF2; 
+$palette-pink-100: #FBD4E5; 
+$palette-pink-200: #F7A9CA; 
+$palette-pink-300: #F47FB0; 
+$palette-pink-400: #F05495; 
+$palette-pink-500: #EC297B; 
+$palette-pink-600: #B11F5C; 
+$palette-pink-700: #76153E; 
+$palette-pink-800: #3B0A1F; 
+$palette-pink-900: #18040C; 
+
+//palette-coral/ 
+$palette-coral-50: #FFEEEE; 
+$palette-coral-100: #FFDBDB; 
+$palette-coral-200: #FFB7B7; 
+$palette-coral-300: #FF9393; 
+$palette-coral-400: #FF6F6F; 
+$palette-coral-500: #FF4B4B; 
+$palette-coral-600: #BF3838; 
+$palette-coral-700: #802626; 
+$palette-coral-800: #401313; 
+$palette-coral-900: #1A0808; 
 
 
+//semantic colors
+//--------------------------------------------------------
+$success-50: $palette-green-50;
+$success-100: $palette-green-100;
+$success-200: $palette-green-200;
+$success-300: $palette-green-300;
+$success-400: $palette-green-400;
+$success-500: $palette-green-500;
+$success-600: $palette-green-600;
+$success-700: $palette-green-700;
+$success-800: $palette-green-800;
+$success-900: $palette-green-900;
 
-// //palette colors
-// $red-100:  v
-// $red-200: ;
-// $red-300: ;
-// $red-400: ;
-// $red-500: ;
-// $red-600: ;
-// $red-700: ;
-// $red-800: ;
-// $red-900: ;
+// warning/ 
+$warning-50: $palette-orange-50;
+$warning-100: $palette-orange-100;
+$warning-200: $palette-orange-200;
+$warning-300: $palette-orange-300;
+$warning-400: $palette-orange-400;
+$warning-500: $palette-orange-500;
+$warning-600: $palette-orange-600;
+$warning-700: $palette-orange-700;
+$warning-800: $palette-orange-800;
+$warning-900: $palette-orange-900;
 
-// $orange-100: ;
-// $orange-200: ;
-// $orange-300: ;
-// $orange-400: ;
-// $orange-500: ;
-// $orange-600: ;
-// $orange-700: ;
-// $orange-800: ;
-// $orange-900: ;
-
-// $yellow-100: ;
-// $yellow-200: ;
-// $yellow-300: ;
-// $yellow-400: ;
-// $yellow-500: ;
-// $yellow-600: ;
-// $yellow-700: ;
-// $yellow-800: ;
-// $yellow-900: ;
-
-// $amber-100: ;
-// $amber-200: ;
-// $amber-300: ;
-// $amber-400: ;
-// $amber-500: ;
-// $amber-600: ;
-// $amber-700: ;
-// $amber-800: ;
-// $amber-900: ;
-
-// $lime-100: ;
-// $lime-200: ;
-// $lime-300: ;
-// $lime-400: ;
-// $lime-500: ;
-// $lime-600: ;
-// $lime-700: ;
-// $lime-800: ;
-// $lime-900: ;
-
-// $green-100: ;
-// $green-200: ;
-// $green-300: ;
-// $green-400: ;
-// $green-500: ;
-// $green-600: ;
-// $green-700: ;
-// $green-800: ;
-// $green-900: ;
-
-// $teal-100
+// danger/ 
+$danger-50: $palette-red-50;
+$danger-100: $palette-red-100;
+$danger-200: $palette-red-200;
+$danger-300: $palette-red-300;
+$danger-400: $palette-red-400;
+$danger-500: $palette-red-500;
+$danger-600: $palette-red-600;
+$danger-700: $palette-red-700;
+$danger-800: $palette-red-800;
+$danger-900: $palette-red-900;
 
 
-
-
-
-// //semantic colors
-// $primary-100: ;
-// $primary-200: ;
-// $primary-300: ;
-// $primary-400: ;
-// $primary-500: ;
-// $primary-600: ;
-// $primary-700: ;
-// $primary-800: ;
-// $primary-900: ;
-
-// $secondary-100: ;
-// $secondary-200: ;
-// $secondary-300: ;
-// $secondary-400: ;
-// $secondary-500: ;
-// $secondary-600: ;
-// $secondary-700: ;
-// $secondary-800: ;
-// $secondary-900: ;
-
-// $tertiary-100: ;
-// $tertiary-200: ;
-// $tertiary-300: ;
-// $tertiary-400: ;
-// $tertiary-500: ;
-// $tertiary-600: ;
-// $tertiary-700: ;
-// $tertiary-800: ;
-// $tertiary-900: ;
-
-// $danger-100: ;
-// $danger-200: ;
-// $danger-300: ;
-// $danger-400: ;
-// $danger-500: ;
-// $danger-600: ;
-// $danger-700: ;
-// $danger-800: ;
-// $danger-900: ;
-
-// $success-100: ;
-// $success-200: ;
-// $success-300: ;
-// $success-400: ;
-// $success-500: ;
-// $success-600: ;
-// $success-700: ;
-// $success-800: ;
-// $success-900: ;
-
-// $warning-100: ;
-// $warning-200: ;
-// $warning-300: ;
-// $warning-400: ;
-// $warning-500: ;
-// $warning-600: ;
-// $warning-700: ;
-// $warning-800: ;
-// $warning-900: ;
-
-// $info-100: ;
-// $info-200: ;
-// $info-300: ;
-// $info-400: ;
-// $info-500: ;
-// $info-600: ;
-// $info-700: ;
-// $info-800: ;
-// $info-900: ;
+// info/ 
+$info-50: $palette-blue-50;
+$info-100: $palette-blue-100;
+$info-200: $palette-blue-200;
+$info-300: $palette-blue-300;
+$info-400: $palette-blue-400;
+$info-500: $palette-blue-500;
+$info-600: $palette-blue-600;
+$info-700: $palette-blue-700;
+$info-800: $palette-blue-800;
+$info-900: $palette-blue-900;
 

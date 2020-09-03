@@ -1,0 +1,31 @@
+.input-group{
+    margin-bottom: 1rem;
+}
+
+input[type=button], input[type=submit], input[type=reset],button {
+    background-color: $primary-500;
+    border: none;
+    color: white;
+    margin: 0;
+    padding: .5em 2em;
+    text-decoration: none;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+}
+
+
+input[type=password], input[type=text], input[number] {
+    border: 1px solid $neutral-200;
+    color: white;
+    margin: 0;
+    padding: .5em .5em;
+    text-decoration: none;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+}
+
+label{
+    display: block;
+    color: $neutral-700;
+    margin-bottom: .5em;
+}

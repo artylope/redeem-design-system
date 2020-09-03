@@ -1,4 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 1.4em;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.4em;
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.38em;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.33em;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -6,15 +42,49 @@ body {
   padding: 0;
   font-size: 16px;
   font-family: "Rubik", sans-serif;
-  line-height: 1.25em;
-  background: #f2f5f7;
-  color: #2d3138;
+  line-height: 1.33em;
+  background: #ECEFF3;
+  color: #101213;
+}
+
+div, p, input, button, ul, ol, span {
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
 }
 
 p, button, input {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-family: "Rubik", sans-serif;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+input[type=button], input[type=submit], input[type=reset], button {
+  background-color: #302ED0;
+  border: none;
+  color: white;
+  margin: 0;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=password], input[type=text], input[number] {
+  border: 1px solid #D9DFE7;
+  color: white;
+  margin: 0;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  color: #505861;
+  margin-bottom: 0.5em;
 }

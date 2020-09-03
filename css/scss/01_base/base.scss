@@ -5,17 +5,19 @@ body{
     padding: 0;
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
-    line-height: 1.25em;
+    line-height: 1.33em;
     background: $neutral-100;
     color: $neutral-900;
 }
 
+div, p, input, button, ul, ol, span{
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+}
 p, button, input{
     border: none;
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    font-family: 'Rubik', sans-serif;
 }
 
 
