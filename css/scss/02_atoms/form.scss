@@ -2,26 +2,79 @@
     margin-bottom: 1rem;
 }
 
-input[type=button], input[type=submit], input[type=reset],button {
-    background-color: $primary-500;
-    border: none;
-    color: white;
-    margin: 0;
-    padding: .5em 2em;
-    text-decoration: none;
-    border-radius: $base-border-radius;
-    cursor: pointer;
+.input-group-inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    input[type=password], input[type=text], input[number], select{
+        margin-right: .2em;
+    }
 }
 
-
-input[type=password], input[type=text], input[number] {
-    border: 1px solid $neutral-200;
-    color: white;
+input[type=password], input[type=text], input[number], select{
+    min-width: 320px;
+    // border: 1px solid $neutral-200;
+    border: 1px solid transparent;
+    background: $neutral-100;
+    color: $neutral-900;
     margin: 0;
-    padding: .5em .5em;
+    // padding: .5em .5em;
     text-decoration: none;
     border-radius: $base-border-radius;
     cursor: pointer;
+    height: 40px;
+    display: flex;
+    padding-left: .5em;
+    padding-right: .5em;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $primary-200;
+        border-radius: $base-border-radius;
+    }
+
+    &::-webkit-input-placeholder { /* Edge */
+        color: $neutral-500;
+      }
+      
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $neutral-500;
+      }
+      
+    &::placeholder {
+        color: $neutral-500;
+      }
+}
+
+textarea{
+    border: 1px solid $neutral-200;
+    color: $neutral-900;
+    margin: 0;
+    text-decoration: none;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+    display: flex;
+    padding: .5em;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $primary-200;
+        border-radius: $base-border-radius;
+    }
+
+    &::-webkit-input-placeholder { /* Edge */
+        color: $neutral-500;
+      }
+      
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $neutral-500;
+      }
+      
+    &::placeholder {
+        color: $neutral-500;
+      }
 }
 
 label{
@@ -29,3 +82,4 @@ label{
     color: $neutral-700;
     margin-bottom: .5em;
 }
+
