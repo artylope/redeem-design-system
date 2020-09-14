@@ -1,0 +1,195 @@
+$topbar-height: 60px;
+$sidebar-width: 240px;
+
+
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 20px;
+    width: $sidebar-width;
+    color: $palette-neutral-050;
+    background: $palette-neutral-800;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-content: space-between;
+
+    .logo{
+        display: flex;
+        justify-items: flex-start;
+        align-content: center;
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .side-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        flex: 1;
+        
+        .sidenav-buttons{
+            display: flex;
+            flex-direction: column;
+
+            .sidenav-button{
+                display: flex;
+                flex-direction: row;
+                font-size: 14px;
+                height: 46px;
+                padding-left: 16px;
+                padding-right: 16px;
+                font-weight: 500;
+                border-radius: $base-border-radius;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 8px;
+                color: $palette-neutral-050;
+
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+
+                &:hover{
+                    background: lighten($palette-neutral-800,20%);
+                }
+
+                &.selected{
+                    background: lighten($palette-neutral-800,15%);
+                }
+
+                cursor: pointer;
+                i{
+                    margin-right: 8px;
+                }
+            }
+        }
+            
+    }
+
+    .bottom-menu{
+        margin-bottom: 20px;
+
+        .bottomnav-buttons{
+            display: flex;
+            flex-direction: column;
+
+            .bottomnav-button{
+                display: flex;
+                flex-direction: row;
+                font-size: 14px;
+                height: 46px;
+                padding-left: 16px;
+                padding-right: 16px;
+                font-weight: 400;
+                border-radius: $base-border-radius;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 4px;
+                color: $palette-neutral-050;
+
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+
+                &:hover{
+                    background: lighten($palette-neutral-800,20%);
+                }
+
+                &.selected{
+                    background: lighten($palette-neutral-800,15%);
+                }
+
+                cursor: pointer;
+                i{
+                    margin-right: 8px;
+                }
+            }
+
+        }
+
+    }
+  }
+
+
+  .admin-content-section {
+    position: relative;
+    left: $sidebar-width;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+    color: $palette-neutral-900;
+    background: $palette-neutral-050;
+
+    .topbar{
+        // height: $topbar-height;
+        width: 100%;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        // padding: 16px;
+        display: flex;
+        flex-direction: row ;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        .campaign-switcher-button{
+            display: flex;
+            flex-direction: row ;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: $base-border-radius;
+            border: 1px solid transparent;
+
+
+            &:hover{
+                background: lighten($palette-neutral-050,15%);
+                border: 1px solid $palette-neutral-100;
+            }
+
+            .campaign-avatar{
+                width: 40px;
+                height: 40px;
+                background: $palette-red-500;
+                color: white;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: row ;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+            }
+
+            .campaign-title{
+               width: 120px;
+               word-wrap: break-word; 
+               margin-right: 10px;
+            }
+
+            i{
+                font-size: 24px;
+            }
+        }
+    }
+    .admin-content{
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        h1{
+            font-size: 2.4em;
+            color: $palette-neutral-800;
+        }
+    }
+  }
+  
