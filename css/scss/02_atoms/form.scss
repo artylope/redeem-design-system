@@ -1,5 +1,21 @@
 .input-group{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+
+    label{
+
+    }
+
+    .caption{
+
+    }
+
+    .validation{
+
+    }
+
+    input{
+      
+    }
 }
 
 .input-group-inline{
@@ -14,7 +30,7 @@
 }
 
 input[type=password], input[type=text], input[number], select{
-    min-width: 320px;
+    width: 100%;
     // border: 1px solid $palette-neutral-200;
     border: 1px solid transparent;
     background: $palette-neutral-100;

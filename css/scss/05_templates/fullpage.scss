@@ -1,14 +1,17 @@
 .full-page-top-bar{
-    height: $topbar-height;
     background: white;
-    margin-bottom: 40px;
     box-shadow: $box-shadow-sm;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: $topbar-height;
     
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
+    
     button{
         display: inline-block;
     }
