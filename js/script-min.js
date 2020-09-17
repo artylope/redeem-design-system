@@ -1,0 +1,1 @@
+const tempalte=document.createElement("template");class PopupNotify extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(template.content.cloneNode(!0))}}
